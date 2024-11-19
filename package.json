@@ -1,0 +1,33 @@
+{
+  "name": "vue-meteor-v3",
+  "private": true,
+  "scripts": {
+    "start": "meteor --exclude-archs 'web.browser.legacy, web.cordova'",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "npm-latest": "ncu --interactive --format group",
+    "lint": "npx @biomejs/biome check --write ./",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.8",
+    "meteor-node-stubs": "^1.2.9",
+    "meteor-vite": "^1.10.4",
+    "valibot": "^0.26.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.ts"
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/meteor": "^2.9.8",
+    "@types/node": "^20.14.12",
+    "@vitejs/plugin-vue": "^4.6.2",
+    "npm-check-updates": "^16.14.20",
+    "typescript": "^5.5.4",
+    "vite": "^4.5.2",
+    "vue": "^3.4.34"
+  }
+}
